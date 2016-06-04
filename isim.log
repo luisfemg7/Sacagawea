@@ -1,5 +1,6 @@
 ISim log file
-Running: /home/tony/Sacagawea/Divisor_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/tony/Sacagawea/Divisor_isim_beh.wdb 
+Running: /home/tony/Sacagawea/ALU_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/tony/Sacagawea/ALU_isim_beh.wdb 
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
 ISim P.20131013 (signature 0xfbc00daa)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -10,10 +11,7 @@ Time resolution is 1 ps
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
-at 0 ps, Instance /divisor/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 Finished circuit initialization process.
-# isim force add /divisor/m 0a -radix hex
-# isim force add /divisor/q 05 -radix hex
-# run 1.00us
-# run 1.00us
-# run 1.00us
+# isim force add /alu/ctrl_alu 0100 -radix bin
+# exit 0
+# exit 0

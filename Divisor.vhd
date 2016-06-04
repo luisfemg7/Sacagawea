@@ -30,27 +30,39 @@ use IEEE.std_logic_arith.all;
 --use UNISIM.VComponents.all;
 
 entity Divisor is
-	port(M : in std_logic_vector(7 downto 0);
-		  Q : inout std_logic_vector( 7 downto 0));
+	port(M, Q : in std_logic_vector(7 downto 0);
+		  S : out std_logic_vector (7 downto 0));
 end Divisor;
 
 architecture Behavioral of Divisor is
 begin
 	process(M, Q)
-		signal A : std_logic_vector(7 downto 0);
+		variable A, B : std_logic_vector(7 downto 0);
 	begin
-		for I in 1 to 8 loop
-		A <= to_stdlogicvector(to_bitvector(A) sll 1);
-		A(0) <= Q(0);
-		Q <= to_stdlogicvector(to_bitvector(Q) sll 1);
-		A <= UNSIGNED(A) - UNSIGNED(M);
-		if SIGNED(A) < conv_signed(0, 8) then
-			Q(0) <= '0';
-			A <= UNSIGNED(A) + UNSIGNED(M);
-		else
-			Q(0) <= '1';
-		end if;
+		A := "00000000";
+		B := Q;
+		for I in 0 to 7 loop
+			A := to_stdlogicvector(to_bitvector(A) sll 1);
+			A(0) := B(7);
+			B := to_stdlogicvector(to_bitvector(B) sll 1);
+			A := SIGNED(A) - SIGNED(M);
+			if SIGNED(A) < conv_signed(0, 7) then
+				B(0) := '0';
+				A := UNSIGNED(A) + UNSIGNED(M);
+			else
+				B(0) := '1';
+			end if;
+			report "ITER: "&integer'image(I);
+			for t in 0 to 7 loop
+				 report "A("&integer'image(t)&") value is" &   
+						std_logic'image(A(t));
+			end loop;
+			for t in 0 to 7 loop
+				report "B("&integer'image(t)&") value is" &   
+					std_logic'image(B(t));
+			end loop;
 		end loop;
+		S <= B;
 	end process;
 
 end Behavioral;
