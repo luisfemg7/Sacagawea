@@ -1,21 +1,30 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/tony/Sacagawea/ALU_isim_beh.exe -prj /home/tony/Sacagawea/ALU_beh.prj work.ALU 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/tony/Sacagawea/Alu_regs_isim_beh.exe -prj /home/tony/Sacagawea/Alu_regs_beh.prj work.Alu_regs 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
+Parsing VHDL file "/home/tony/Sacagawea/registers/Register8.vhd" into library work
+Parsing VHDL file "/home/tony/Sacagawea/Mux4to1_8bit.vhd" into library work
 Parsing VHDL file "/home/tony/Sacagawea/ALU.vhd" into library work
+Parsing VHDL file "/home/tony/Sacagawea/Alu_regs.vhd" into library work
 Starting static elaboration
+WARNING:HDLCompiler:794 - "/home/tony/Sacagawea/Mux4to1_8bit.vhd" Line 41: Statement might not cover all choices ; 'others' clause recommended
 Completed static elaboration
-Fuse Memory Usage: 95968 KB
-Fuse CPU Usage: 1290 ms
+Fuse Memory Usage: 97944 KB
+Fuse CPU Usage: 1340 ms
 Compiling package standard
 Compiling package std_logic_1164
+Compiling package numeric_std
 Compiling package std_logic_arith
-Compiling architecture behavioral of entity alu
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity Register8 [register8_default]
+Compiling architecture behavioral of entity Mux4to1_8bit [mux4to1_8bit_default]
+Compiling architecture behavioral of entity ALU [alu_default]
+Compiling architecture behavioral of entity alu_regs
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 4 VHDL Units
-Built simulation executable /home/tony/Sacagawea/ALU_isim_beh.exe
-Fuse Memory Usage: 666244 KB
-Fuse CPU Usage: 1460 ms
-GCC CPU Usage: 600 ms
+Compiled 12 VHDL Units
+Built simulation executable /home/tony/Sacagawea/Alu_regs_isim_beh.exe
+Fuse Memory Usage: 673776 KB
+Fuse CPU Usage: 1730 ms
+GCC CPU Usage: 7900 ms

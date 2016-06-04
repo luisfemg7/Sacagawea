@@ -1,6 +1,5 @@
 ISim log file
-Running: /home/tony/Sacagawea/ALU_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/tony/Sacagawea/ALU_isim_beh.wdb 
-INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
+Running: /home/tony/Sacagawea/Alu_regs_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/tony/Sacagawea/Alu_regs_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -12,6 +11,4 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# isim force add /alu/ctrl_alu 0100 -radix bin
-# exit 0
 # exit 0
