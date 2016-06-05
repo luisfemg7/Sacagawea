@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/tony/Sacagawea/Alu_regs_isim_beh.exe" -prj "/home/tony/Sacagawea/Alu_regs_beh.prj" "work.Alu_regs" 
+-intstyle "ise" -incremental -lib "secureip" -o "/home/tony/Sacagawea/Mux2to1_8bit_isim_beh.exe" -prj "/home/tony/Sacagawea/Mux2to1_8bit_beh.prj" "work.Mux2to1_8bit" 

@@ -36,7 +36,8 @@ entity Alu_regs is
 		  clk : in std_logic;
 		  r0_clr, r1_clr, r2_clr : in std_logic;
 		  ctrl_alu : in std_logic_vector(3 downto 0);
-		  s_alu_regs: out std_logic_vector( 7 downto 0));
+		  s_alu_regs: out std_logic_vector( 7 downto 0);
+		  x_reg0, x_reg1, x_reg2 : out std_logic_vector( 7 downto 0));
 end Alu_regs;
 
 architecture Behavioral of Alu_regs is
@@ -63,15 +64,16 @@ architecture Behavioral of Alu_regs is
 	signal s_ma, s_mb : std_logic_vector(7 downto 0);
 	signal salu: std_logic_vector(7 downto 0);
 begin
+	
 	m0: Register8 port map (salu, r0_ld, r0_clr, clk, s_r0);
 	m1: Register8 port map (salu, r1_ld, r1_clr, clk, s_r1);
 	m2: Register8 port map (salu, r2_ld, r2_clr, clk, s_r2);
-	m3: Mux4to1_8bit port map (s_r0, s_r1, s_r2, s_mbr, sel_a, s_ma); 
-	m4: Mux4to1_8bit port map (s_r0, s_r1, s_r2, s_mbr, sel_b, s_mb); 
-	m5: ALU port map (s_ma, s_mb, ctrl_alu, salu);
-	
+	r1: Mux4to1_8bit port map (s_r0, s_r1, s_r2, s_mbr, sel_a, s_ma); 
+	r2: Mux4to1_8bit port map (s_r0, s_r1, s_r2, s_mbr, sel_b, s_mb); 
+	s1: ALU port map (s_ma, s_mb, ctrl_alu, salu);
 	s_alu_regs <= salu;
-
-
+	x_reg0 <= s_r0;
+	x_reg1 <= s_r1;	
+	x_reg2 <= s_r2;
 end Behavioral;
 

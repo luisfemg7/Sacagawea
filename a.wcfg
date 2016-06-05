@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/tony/Sacagawea/testbench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/testbench/r0_ld" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">r0_ld</obj_property>
+      <obj_property name="ObjectShortName">r0_ld</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/r1_ld" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">r1_ld</obj_property>
+      <obj_property name="ObjectShortName">r1_ld</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/r2_ld" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">r2_ld</obj_property>
+      <obj_property name="ObjectShortName">r2_ld</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/sel_a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sel_a[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sel_a[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/sel_b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sel_b[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sel_b[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/s_mbr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_mbr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_mbr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff0000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/r0_clr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">r0_clr</obj_property>
+      <obj_property name="ObjectShortName">r0_clr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/r1_clr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">r1_clr</obj_property>
+      <obj_property name="ObjectShortName">r1_clr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/r2_clr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">r2_clr</obj_property>
+      <obj_property name="ObjectShortName">r2_clr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/ctrl_alu" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ctrl_alu[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_alu[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/sout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sout[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/x0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">x0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x0[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/x1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">x1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/x2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">x2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x2[7:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -5,8 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="794" delta="unknown" >"/home/tony/Sacagawea/Mux4to1_8bit.vhd" Line 41: Statement might not cover all choices ; &apos;others&apos; clause recommended
-</msg>
-
 </messages>
 
