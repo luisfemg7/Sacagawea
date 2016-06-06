@@ -49,7 +49,7 @@ begin
 				when "1001" => s_alu <= to_stdlogicvector(to_bitvector(s_muxa) sll 1);
 				when "1010" => s_alu <= unsigned(s_muxa) + 1;
 		   	when "1011" => s_alu <= unsigned(s_muxa) - 1;
-				when others => 	s_alu <= "00001111";
+				when others => s_alu <= "XXXXXXXX";
 				
 			end case;
 		end process;
